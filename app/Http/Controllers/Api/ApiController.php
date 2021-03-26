@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
     public function returnFirst(){
-        dd('mimmo');
+        $firstData= Cat::orderBy('id','ASC')->first();
+        response()->json($firstData->toArray());
     }
 }
