@@ -9,6 +9,6 @@ class ApiController extends Controller
 {
     public function returnFirst(){
         $firstData= Cat::orderBy('id','ASC')->first();
-        response()->json($firstData->toArray());
+       return response()->json($firstData);
     }
 }
